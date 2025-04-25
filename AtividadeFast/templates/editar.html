@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Filme</title>
+</head>
+<body>
+    <h1>Editar Filme: {{ filme.filme }}</h1>
+    <form action="/atualizar/{{ filme.id }}" method="post">
+        <label for="filme">Filme:</label>
+        <input type="text" name="filme" value="{{ filme.filme }}"><br><br>
+
+        <label for="classificacao">Classificação:</label>
+        <input type="number" name="classificacao" value="{{ filme.classificacao }}"><br><br>
+
+        <label for="genero">Gênero:</label>
+        <input type="text" name="genero" value="{{ filme.genero }}"><br><br>
+
+        <label for="sobre">Sobre:</label>
+        <textarea name="sobre">{{ filme.sobre }}</textarea><br><br>
+
+        <label for="capa">Capa:</label>
+        <input type="text" name="capa" value="{{ filme.capa }}"><br><br>
+
+        <label for="data_horario">Data e Horário:</label>
+        <input type="text" name="data_horario" value="{{ filme.data_horario }}"><br><br>
+
+        <button type="submit">Atualizar</button>
+    </form>
+    <br>
+    <a href="/">Voltar</a>
+</body>
+</html>
