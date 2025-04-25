@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Filmes</title>
+</head>
+<body>
+    <h1>Lista de Filmes</h1>
+    <ul>
+        {% for filme in filmes %}
+        <li>
+            <strong>{{ filme.filme }}</strong> ({{ filme.genero }}, {{ filme.classificacao }}+)<br>
+            Sobre: {{ filme.sobre }}<br>
+            Horário: {{ filme.data_horario }}<br>
+            <img src="{{ filme.capa }}" width="100"><br><br>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Voltar</a>
+</body>
+</html>
